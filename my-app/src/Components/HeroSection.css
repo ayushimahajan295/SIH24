@@ -1,0 +1,29 @@
+/* HeroSection.css */
+.heroSection {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 100px 0; /* Padding for top and bottom */
+    text-align: center; /* Center-align text */
+  }
+  
+  .heroHeadline {
+    font-size: 2.5rem;
+    color: #007bff; /* Brand color */
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .heroSubtext {
+    font-size: 1.25rem;
+    color: #6c757d; /* Muted color */
+    margin-bottom: 40px;
+  }
+  
+  .heroButton {
+    font-size: 1.25rem;
+    padding: 10px 30px;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+  }
+  

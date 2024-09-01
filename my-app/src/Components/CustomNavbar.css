@@ -1,0 +1,68 @@
+/* Navbar Container */
+.navbar-custom {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between brand, links, and buttons */
+  flex-wrap: nowrap; /* Prevent wrapping of items */
+}
+
+/* Brand Styling */
+.navbar-custom .navbar-brand {
+  font-weight: bold;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+}
+
+.stethoscope-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem; /* Space between icon and text */
+}
+
+/* Navigation Links */
+.navbar-custom .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1; /* Allow shrinking to fit smaller screens */
+  margin-left: 1rem; /* Ensure some space from the brand */
+  margin-right: 1rem; /* Ensure some space before buttons */
+}
+
+.nav-link-custom {
+  color: #343a40;
+  margin: 0 0.75rem; /* Space between links */
+  white-space: nowrap; /* Prevent wrapping */
+  font-size: 1rem;
+}
+
+.nav-link-custom:hover {
+  color: #007bff !important; /* Change color on hover */
+}
+
+/* Buttons */
+.navbar-custom .button-links {
+  display: flex;
+  align-items: center;
+}
+
+.btn-custom {
+  margin-left: 0.5rem; /* Space between buttons */
+  margin-right: 0.5rem;
+  color: #007bff !important; /* Button text color */
+  border-color: #007bff !important; /* Button border color */
+}
+
+.btn-custom:hover {
+  background-color: #007bff !important; /* Button background on hover */
+  color: #fff !important; /* Button text color on hover */
+}
+
+/* Prevent Navbar from Wrapping */
+.navbar-collapse {
+  flex-wrap: nowrap !important;
+  justify-content: space-between;
+}
