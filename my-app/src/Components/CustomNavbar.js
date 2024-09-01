@@ -6,23 +6,23 @@ export default function CustomNavbar() {
   return (
     <Navbar bg="light" expand="lg" className="py-3 shadow-sm">
       <Container>
-        <Navbar.Brand href="/" className="font-weight-bold text-primary d-flex align-items-center">
-          <FaStethoscope className="mr-2" /> {/* Medical symbol */}
-          Speech Therapy
+        <Navbar.Brand href="/" className="d-flex align-items-center">
+          <FaStethoscope className="mr-2" style={{ fontSize: '1.5rem' }} /> {/* Medical symbol */}
+          <span className="font-weight-bold text-primary">Speech Therapy</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/" className="text-dark mx-3 nav-link-custom">
+            <Nav.Link href="/" className="nav-link-custom">
               Home
             </Nav.Link>
-            <Nav.Link href="/about" className="text-dark mx-3 nav-link-custom">
+            <Nav.Link href="/about" className="nav-link-custom">
               About Us
             </Nav.Link>
-            <Nav.Link href="/learn-more" className="text-dark mx-3 nav-link-custom">
+            <Nav.Link href="/learn-more" className="nav-link-custom">
               Learn More
             </Nav.Link>
-            <Nav.Link href="/contact" className="text-dark mx-3 nav-link-custom">
+            <Nav.Link href="/contact" className="nav-link-custom">
               Contact Us
             </Nav.Link>
           </Nav>
@@ -37,8 +37,12 @@ export default function CustomNavbar() {
         </Navbar.Collapse>
       </Container>
 
-      {/* Custom CSS styles */}
-      <style jsx>{`
+      {/* Global Custom CSS styles */}
+      <style jsx global>{`
+        .nav-link-custom {
+          color: #343a40; /* Default text color */
+          margin-right: 15px;
+        }
         .nav-link-custom:hover {
           color: #007bff !important; /* Change color to match Speech Therapy brand on hover */
         }
@@ -61,6 +65,10 @@ export default function CustomNavbar() {
         }
         .navbar-nav.ml-auto {
           margin-left: auto;
+        }
+        .navbar {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
         }
       `}</style>
     </Navbar>
