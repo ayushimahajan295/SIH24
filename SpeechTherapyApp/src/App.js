@@ -1,35 +1,35 @@
 import React from 'react';
-import CustomNavbar from './Components/Navbar'; // Import the Navbar
-import HomePage from './Components/HomePage'; // Import the HomePage
+import CustomNavbar from './Components/CustomNavbar';
+import HomePage from './Components/HomePage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <div>
-      <CustomNavbar /> {/* Navbar is rendered here independently */}
-      <HomePage /> {/* Home page content, including Hero section, is rendered here */}
-
-      {/* Global Custom CSS styles */}
+      <CustomNavbar />
+      <HomePage />
       <style jsx global>{`
         .nav-link-custom {
-          color: #343a40; /* Default text color */
+          color: #343a40;
           margin-right: 15px;
         }
         .nav-link-custom:hover {
-          color: #007bff !important; /* Change color to match Speech Therapy brand on hover */
+          color: #007bff !important;
         }
         .nav-link-custom.active {
-          color: #007bff !important; /* Keep the active link in brand color */
+          color: #007bff !important;
         }
         .btn-custom {
-          color: #007bff !important; /* Text color on button */
-          border-color: #007bff !important; /* Border color of the outline button */
+          color: #007bff !important;
+          border-color: #007bff !important;
         }
         .btn-custom:hover {
-          background-color: #007bff !important; /* Background color on hover */
-          color: #fff !important; /* Text color on hover */
+          background-color: #007bff !important;
+          color: #fff !important;
         }
         .navbar-brand {
-          flex-grow: 1; /* Make the brand take up space */
+          flex-grow: 1;
         }
         .navbar-brand .mr-2 {
           margin-right: 0.5rem;
