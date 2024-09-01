@@ -1,11 +1,16 @@
 import React from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
+import logo from './app-logo.png';
 
 function CustomNavbar() {
   return (
     <Navbar expand="lg" bg="light" variant="light">
       <Navbar.Brand href="/" className="navbar-brand">
-        <img src="/path-to-logo/logo.png" alt="Speech Therapy Logo" className="mr-2" />
+        <img 
+          src={logo} 
+          alt="Speech Therapy Logo" 
+          style={{ height: '40px', width: 'auto', marginRight: '10px' }} 
+        />
         Speech Therapy
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

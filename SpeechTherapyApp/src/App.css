@@ -1,6 +1,3 @@
-/* App.css */
-
-/* Basic global styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -15,8 +12,10 @@ button {
   cursor: pointer;
 }
 
-/* Ensure that the app container doesn't have default margins or paddings */
 .App {
   margin: 0;
   padding: 0;
 }
+
+
+
