@@ -1,4 +1,5 @@
 import React from 'react';
+import './HomePage.css'; // Ensure this file contains the required CSS
 
 function HomePage() {
   return (

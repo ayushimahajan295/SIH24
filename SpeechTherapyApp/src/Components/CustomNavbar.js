@@ -1,30 +1,44 @@
 import React from 'react';
-import { Navbar, Nav, Button } from 'react-bootstrap';
-import logo from './app-logo.png';
+import './HomePage.css';
+import logo from '../Assets/app-logo.png';
 
 function CustomNavbar() {
   return (
-    <Navbar expand="lg" bg="light" variant="light">
-      <Navbar.Brand href="/" className="navbar-brand">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="/" className="navbar-brand">
         <img 
           src={logo} 
           alt="Speech Therapy Logo" 
           style={{ height: '40px', width: 'auto', marginRight: '10px' }} 
         />
         Speech Therapy
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Link href="/" className="nav-link-custom">Home</Nav.Link>
-          <Nav.Link href="/about" className="nav-link-custom">About Us</Nav.Link>
-          <Nav.Link href="/learn" className="nav-link-custom">Learn More</Nav.Link>
-          <Nav.Link href="/contact" className="nav-link-custom">Contact Us</Nav.Link>
-          <Nav.Link href="/login" className="nav-link-custom">Login</Nav.Link>
-          <Button variant="outline-primary" className="btn-custom ml-2">Sign Up</Button>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+      </a>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <a href="/" className="nav-link nav-link-custom">Home</a>
+          </li>
+          <li className="nav-item">
+            <a href="/about" className="nav-link nav-link-custom">About Us</a>
+          </li>
+          <li className="nav-item">
+            <a href="/learn" className="nav-link nav-link-custom">Learn More</a>
+          </li>
+          <li className="nav-item">
+            <a href="/contact" className="nav-link nav-link-custom">Contact Us</a>
+          </li>
+          <li className="nav-item">
+            <a href="/login" className="nav-link nav-link-custom">Login</a>
+          </li>
+          <li className="nav-item">
+            <a href="/signup" className="btn btn-outline-primary btn-custom ml-2">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 
