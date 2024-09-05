@@ -1,35 +1,28 @@
-import React, { useState } from 'react';
-import TherapistCard from './TherapistCard';
+// PatientDashboard.js
+import React from 'react';
+import PatientDashboardNavbar from './PatientDashboardNavbar';
+import PatientHeroSection from './PatientHeroSection';
 
-const therapists = [
-  { name: 'Dr. Smith', specialty: 'Speech Therapy', rating: 4.8 },
-  { name: 'Dr. Jones', specialty: 'Pediatric Speech Therapy', rating: 4.5 },
-];
+const appointment = {
+  date: '2024-09-10',
+  time: '10:00 AM',
+  therapistName: 'Dr. Smith',
+  type: 'Online',
+};
 
-function PatientDashboard() {
-  const [search, setSearch] = useState('');
+const progress = 40;
 
-  const filteredTherapists = therapists.filter(t =>
-    t.name.toLowerCase().includes(search.toLowerCase())
-  );
-
+const PatientDashboard = () => {
   return (
-    <div className="container mt-5">
-      <h1>Your Therapists</h1>
-      <input
-        type="text"
-        className="form-control"
-        placeholder="Search Therapists..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
+    <div>
+      <PatientDashboardNavbar />
+      <PatientHeroSection
+        patientName="John Doe"
+        appointment={appointment}
+        progress={progress}
       />
-      <div className="mt-4">
-        {filteredTherapists.map((therapist, index) => (
-          <TherapistCard key={index} therapist={therapist} />
-        ))}
-      </div>
     </div>
   );
-}
+};
 
 export default PatientDashboard;

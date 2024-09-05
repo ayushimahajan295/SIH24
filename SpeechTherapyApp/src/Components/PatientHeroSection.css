@@ -1,0 +1,188 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #f5f7fa;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  .hero-welcome {
+    font-size: 2.5rem;
+    color: #02475e;
+    margin-bottom: 15px;
+  }
+  
+  .hero-subtext {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .search-therapist {
+    margin-bottom: 25px;
+  }
+  
+  .search-input {
+    padding: 12px;
+    width: 65%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 12px;
+    font-size: 1rem;
+  }
+  
+  .btn-search {
+    padding: 12px 20px;
+    background-color: #02475e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-search:hover {
+    background-color: #02394a;
+  }
+  
+  .recommendation-text {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .btn-recommendation {
+    background-color: transparent;
+    border: none;
+    color: #02475e;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 5px;
+  }
+  
+  .btn-recommendation:hover {
+    color: #02394a;
+  }
+  
+  .hero-actions {
+    margin-top: 30px;
+  }
+  
+  .btn {
+    padding: 14px 28px;
+    margin: 12px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #02475e;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #02394a;
+  }
+  
+  .btn-track {
+    background-color: #2a9d8f;
+  }
+  
+  .btn-attendance {
+    background-color: #e76f51;
+  }
+  
+  .btn-track:hover {
+    background-color: #21867a;
+  }
+  
+  .btn-attendance:hover {
+    background-color: #d65a3d;
+  }
+  
+  /* Resources Section */
+  .resources {
+    margin-top: 60px;
+    padding: 50px 0;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .resources-title {
+    font-size: 2rem;
+    color: #02475e;
+    margin-bottom: 30px;
+  }
+  
+  .resources-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .show-more {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .btn-show-more {
+    padding: 12px 24px;
+    color: #fff;
+    background-color: #02475e;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .btn-show-more:hover {
+    background-color: #02394a;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .resources-grid {
+      flex-direction: column;
+    }
+  
+    .hero-content {
+      padding: 30px;
+    }
+  
+    .btn {
+      font-size: 1rem;
+    }
+  
+    .btn-show-more {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  

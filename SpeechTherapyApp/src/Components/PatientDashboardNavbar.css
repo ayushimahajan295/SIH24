@@ -1,0 +1,47 @@
+/* Custom Navbar Styling */
+.custom-navbar {
+    background-color: #f8f9fa; /* Light background like in your reference */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* Blue color like the "Get Started" button in your reference */
+  }
+  
+  .navbar-logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .nav-link {
+    color: #007bff; /* Match link colors to the blue */
+    font-size: 18px;
+  }
+  
+  .nav-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #007bff; /* Match the hamburger icon color */
+  }
+  
+  .nav-item {
+    margin-left: 15px;
+  }
+  
+  .ml-auto .nav-link {
+    color: #007bff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .fa-user-circle {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+  

@@ -1,31 +1,26 @@
-import React from 'react';
-import { useAuth0 } from '@auth0/auth0-react';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 function Login() {
-  const { loginWithRedirect } = useAuth0();
+  const navigate = useNavigate(); // Initialize navigate
+
+  const handleLogin = () => {
+    // Perform login logic here (simplified for now)
+    console.log('User logged in');
+    
+    // Redirect to Patient Dashboard after login
+    navigate('/patient-dashboard');
+  };
 
   return (
-    <Container className="mt-5">
-      <Row className="justify-content-center">
-        <Col md={6} lg={4}>
-          <h1 className="text-center mb-4">Log In</h1>
-          <Form>
-            <Form.Group controlId="formEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter your email" />
-            </Form.Group>
-            <Form.Group controlId="formPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Enter your password" />
-            </Form.Group>
-            <Button variant="primary" type="button" className="w-100" onClick={() => loginWithRedirect()}>
-              Log In
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+    <div className="container">
+      <h1>Login</h1>
+      <input type="text" className="form-control mb-3" placeholder="Enter your username" />
+      <input type="password" className="form-control mb-3" placeholder="Enter your password" />
+      <button className="btn btn-primary" onClick={handleLogin}>
+        Log In
+      </button>
+    </div>
   );
 }
 
