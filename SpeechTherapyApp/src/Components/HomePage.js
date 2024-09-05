@@ -2,6 +2,7 @@ import React from 'react';
 import './HomePage.css';
 import ContactUs from './ContactUs';
 import FAQs from './FAQs';
+import AboutUs from './AboutUs';
 import backgroundImage from '../Assets/image.png';
 
 function HomePage() {
@@ -16,6 +17,8 @@ function HomePage() {
           <a href="/get-started" className="btn btn-primary heroButton">Get Started</a>
         </div>
       </div>
+      <br></br>
+      <AboutUs />
       <FAQs />
       <ContactUs />
     </div>

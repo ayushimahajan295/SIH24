@@ -1,0 +1,94 @@
+.aboutus-section {
+    background-color: #0077b6; /* Blue background */
+    padding: 50px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.aboutus-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.aboutus-text {
+    max-width: 45%;
+    padding: 20px;
+}
+
+.aboutus-heading {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.aboutus-image {
+    max-width: 40%; /* Reduced size of image */
+}
+
+.aboutus-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.arrow {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.2s;
+}
+
+.arrow-right {
+    margin-left: 20px;
+}
+
+.arrow-left {
+    margin-right: 20px;
+    position: absolute;
+    left: 20px; /* Adjust left arrow position */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+.details-content {
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    position: relative; /* Allows the left arrow to be positioned correctly */
+}
+
+.care-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.care-for-children, .care-for-adults {
+    max-width: 45%;
+    margin-top: 20px;
+}
+
+.care-for-children h4, .care-for-adults h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffcc00; /* Optional: Accent color */
+}
+
+.care-for-children ul, .care-for-adults ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.care-for-children ul li, .care-for-adults ul li {
+    margin-bottom: 8px;
+}

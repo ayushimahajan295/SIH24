@@ -73,15 +73,15 @@ h3{
     padding: 10px;
     font-size: 1rem;
     border: none;
-    background-color: #4a4a4a;
-    color: #fff;
+    background-color: #fff;
+    color: #0077b6;
     width: 100%;
     max-width: 300px; /* Optional: Control input width */
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #ccc;
+    color: #0077b6;
 }
 
 .contact-form .submit-btn {
