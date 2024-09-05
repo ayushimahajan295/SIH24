@@ -1,6 +1,7 @@
 import React from 'react';
 import './HomePage.css';
 import logo from '../Assets/app-logo.png';
+import './Footer.js';
 
 function CustomNavbar() {
   return (
@@ -28,7 +29,7 @@ function CustomNavbar() {
             <a href="/learn" className="nav-link nav-link-custom">Learn More</a>
           </li>
           <li className="nav-item">
-            <a href="/contact" className="nav-link nav-link-custom">Contact Us</a>
+            <a href="#contactus" className="nav-link nav-link-custom">Contact Us</a>
           </li>
           <li className="nav-item">
             <a href="/login" className="nav-link nav-link-custom">Login</a>

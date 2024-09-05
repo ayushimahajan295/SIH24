@@ -4,20 +4,20 @@
   }
   
   .nav-link-custom:hover {
-    color: #007bff !important;
+    color: #0077b6 !important;
   }
   
   .nav-link-custom.active {
-    color: #007bff !important;
+    color: #0077b6 !important;
   }
   
   .btn-custom {
-    color: #007bff !important;
-    border-color: #007bff !important;
+    color: #0077b6 !important;
+    border-color: #0077b6 !important;
   }
   
   .btn-custom:hover {
-    background-color: #007bff !important;
+    background-color: #0077b6 !important;
     color: #fff !important;
   }
   
@@ -39,29 +39,65 @@
   }
   
   .heroSection {
-    background-color: #f8f9fa;
-    padding: 100px 0;
+    position: relative; /* Set position to relative for overlay positioning */
+  background-image: url('../Assets/image.png'); /* Correct path */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: #fff;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 60vh; /* Set height to full viewport */
+  overflow: hidden; /* Prevent overflow */
   }
+
+/* Overlay to blur only the background */
+.heroBackgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit; /* Inherits background image from parent */
+  background-size: inherit;
+  background-position: inherit;
+  z-index: 1; /* Layer below content */
+}
+
+/* Ensuring content is on top of the overlay with a semi-transparent background */
+.heroContent {
+  position: relative;
+  z-index: 2; /* Layer above overlay */
+  background: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+  padding: 20px;
+  border-radius: 10px; /* Adds rounded corners */
+  display: inline-block; /* Shrinks the background to fit content */
+  max-width: 600px; /* Optional: Limit width for better appearance */
+  text-align: center; /* Center text */
+}
   
-  .heroHeadline {
-    font-size: 2.5rem;
-    color: #007bff;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
+.heroHeadline {
+  font-size: 2.5rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.heroSubtext {
+  font-size: 1.25rem;
+  color: #6c757d;
+  margin-bottom: 40px;
+}
   
-  .heroSubtext {
-    font-size: 1.25rem;
-    color: #6c757d;
-    margin-bottom: 40px;
-  }
+.heroButton {
+  font-size: 1.25rem;
+  padding: 10px 30px;
+  background-color: #0077b6;
+  border-color: #0077b6;
+  color: #fff;
+  text-decoration: none;
+}
   
-  .heroButton {
-    font-size: 1.25rem;
-    padding: 10px 30px;
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-  }
+  
   
