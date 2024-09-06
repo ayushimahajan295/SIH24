@@ -11,6 +11,7 @@ import Login from './Components/Login';
 import Signup from './Components/Signup';
 import PatientDashboard from './Components/PatientDashboard'; // Ensure this import is correct
 import './App.css';
+import TherapistDashboard from './Components/TherapistDashboard';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
         {/* For Home and other general pages, include the CustomNavbar */}
         <Route path="/" element={
           <>
-            <CustomNavbar /> {/* Home Navbar */}
-            <HomePage />
+            {/* <CustomNavbar /> {/* Home Navbar */}
+            {/* <HomePage /> */}
+            <TherapistDashboard />
           </>
         } />
         <Route path="/about" element={
@@ -56,6 +58,7 @@ function App() {
 
         {/* For the patient dashboard, only render PatientDashboardNavbar */}
         <Route path="/patient-dashboard" element={<PatientDashboard />} />
+
       </Routes>
     </Router>
   );

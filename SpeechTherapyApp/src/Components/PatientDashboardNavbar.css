@@ -18,7 +18,7 @@
   
   .nav-link {
     color: #007bff; /* Match link colors to the blue */
-    font-size: 18px;
+    font-size: 18px; 
   }
   
   .nav-link:hover {
