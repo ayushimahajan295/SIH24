@@ -1,26 +1,23 @@
-// PatientDashboard.js
 import React from 'react';
 import PatientDashboardNavbar from './PatientDashboardNavbar';
-import PatientHeroSection from './PatientHeroSection';
-
-const appointment = {
-  date: '2024-09-10',
-  time: '10:00 AM',
-  therapistName: 'Dr. Smith',
-  type: 'Online',
-};
-
-const progress = 40;
+import PDScrollable from './PDScrollable'; // Import the new scrollable component
+//import './PatientDashboard.css'; // Keep your main dashboard CSS
 
 const PatientDashboard = () => {
   return (
     <div>
       <PatientDashboardNavbar />
-      <PatientHeroSection
-        patientName="John Doe"
-        appointment={appointment}
-        progress={progress}
-      />
+      
+      <div className="dashboard-container">
+        {/* Sidebar with functionalities */}
+        <PDScrollable /> {/* Replaced the old sidebar with the new component */}
+        
+        {/* Main content section */}
+        <div className="main-content">
+          <h2>Welcome to Your Dashboard</h2>
+          {/* Add the main content here based on the selected option */}
+        </div>
+      </div>
     </div>
   );
 };

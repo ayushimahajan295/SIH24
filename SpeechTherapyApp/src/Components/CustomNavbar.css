@@ -13,14 +13,15 @@
   }
   
   .btn-custom {
-    color: white !important;
-    border-color: #0077b6 !important;
+    color: white; /* Text color */
+  background-color: #0077b6; /* Background color */
+  border-color: #0077b6; /* Border color */
     margin: 0 5px; /* Adjusts the spacing between buttons */
   }
   
   .btn-custom:hover {
-    background-color: #0077b6 !important;
-    color: #fff !important;
+    background-color: #005f8d; /* Darker background on hover */
+  color: #fff; /* Text color on hover */
   }
   
   .navbar-brand {
