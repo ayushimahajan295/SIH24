@@ -1,82 +1,40 @@
-.nav-link-custom {
-    color: #343a40;
-    margin-right: 15px;
-  }
-  
-  .nav-link-custom:hover {
-    color: #0077b6 !important;
-  }
-  
-  .nav-link-custom.active {
-    color: #0077b6 !important;
-  }
-  
-  .btn-custom {
-    color: #0077b6 !important;
-    border-color: #0077b6 !important;
-  }
-  
-  .btn-custom:hover {
-    background-color: #0077b6 !important;
-    color: #fff !important;
-  }
-  
-  .navbar-brand {
-    flex-grow: 1;
-  }
-  
-  .navbar-brand .mr-2 {
-    margin-right: 0.5rem;
-  }
-  
-  .navbar-nav.ml-auto {
-    margin-left: auto;
-  }
-  
-  .navbar {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  
-  .heroSection {
-    position: relative; /* Set position to relative for overlay positioning */
-  background-image: url('../Assets/image.png'); /* Correct path */
+/* Hero Section Styles */
+.heroSection {
+  position: relative; 
+  background-image: url('../Assets/image.png');
   background-size: cover;
   background-position: center;
-  padding: 100px 0;
-  color: #fff;
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 60vh; /* Set height to full viewport */
-  overflow: hidden; /* Prevent overflow */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  overflow: hidden;
+  padding: 0 20px; /* Added padding to avoid text touching the edges */
+}
 
-/* Overlay to blur only the background */
+/* Overlay to create a dimmed effect for text readability */
 .heroBackgroundOverlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: inherit; /* Inherits background image from parent */
-  background-size: inherit;
-  background-position: inherit;
-  z-index: 1; /* Layer below content */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent dark overlay */
+  z-index: 1; 
 }
 
-/* Ensuring content is on top of the overlay with a semi-transparent background */
+/* Content positioning and appearance */
 .heroContent {
   position: relative;
-  z-index: 2; /* Layer above overlay */
-  background: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
-  padding: 20px;
-  border-radius: 10px; /* Adds rounded corners */
-  display: inline-block; /* Shrinks the background to fit content */
-  max-width: 600px; /* Optional: Limit width for better appearance */
-  text-align: center; /* Center text */
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 600px;
 }
-  
+
+/* Headline styles */
 .heroHeadline {
   font-size: 2.5rem;
   color: #0077b6;
@@ -84,20 +42,24 @@
   font-weight: bold;
 }
 
+/* Subtext styles */
 .heroSubtext {
   font-size: 1.25rem;
   color: #6c757d;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
-  
+
+/* Button styles */
 .heroButton {
   font-size: 1.25rem;
   padding: 10px 30px;
   background-color: #0077b6;
-  border-color: #0077b6;
+  border: none;
   color: #fff;
   text-decoration: none;
+  transition: background-color 0.3s;
 }
-  
-  
-  
+
+.heroButton:hover {
+  background-color: #005f8a;
+}

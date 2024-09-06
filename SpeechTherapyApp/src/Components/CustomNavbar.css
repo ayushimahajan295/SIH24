@@ -1,0 +1,64 @@
+/* Navbar Customizations */
+.nav-link-custom {
+    color: #343a40;
+    margin-right: 15px;
+  }
+  
+  .nav-link-custom:hover {
+    color: #0077b6 !important;
+  }
+  
+  .nav-link-custom.active {
+    color: #0077b6 !important;
+  }
+  
+  .btn-custom {
+    color: white !important;
+    border-color: #0077b6 !important;
+    margin: 0 5px; /* Adjusts the spacing between buttons */
+  }
+  
+  .btn-custom:hover {
+    background-color: #0077b6 !important;
+    color: #fff !important;
+  }
+  
+  .navbar-brand {
+    display: flex; /* Ensures logo and text are aligned */
+    align-items: center;
+    margin-right: 20px; /* Adds spacing after the brand */
+  }
+  
+  .navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .navbar-nav.ml-auto {
+    margin-left: auto;
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Aligns items vertically */
+  }
+  
+  /* Dropdown Customizations */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Removes the gap so that the dropdown doesn't hide unexpectedly */
+  }
+  
+  .dropdown-menu {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .dropdown-item {
+    color: #343a40;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #0077b6;
+    color: #fff;
+  }
+  

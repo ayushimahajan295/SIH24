@@ -1,7 +1,6 @@
 import React from 'react';
-import './HomePage.css';
+import './CustomNavbar.css';  // Ensure the correct CSS file is imported
 import logo from '../Assets/app-logo.png';
-import './Footer.js';
 
 function CustomNavbar() {
   return (
@@ -32,10 +31,17 @@ function CustomNavbar() {
             <a href="#contactus" className="nav-link nav-link-custom">Contact Us</a>
           </li>
           <li className="nav-item">
-            <a href="/login" className="nav-link nav-link-custom">Login</a>
+            <a href="/patient-login" className="btn btn-outline-primary btn-custom ml-2">Patient Login</a>
           </li>
-          <li className="nav-item">
-            <a href="/signup" className="btn btn-outline-primary btn-custom ml-2">Sign Up</a>
+          <li className="nav-item dropdown">
+            <a href="#" className="btn btn-outline-primary btn-custom ml-2 dropdown-toggle" id="staffLoginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Staff Login
+            </a>
+            <div className="dropdown-menu" aria-labelledby="staffLoginDropdown">
+              <a className="dropdown-item" href="/therapist-login">Therapist Login</a>
+              <a className="dropdown-item" href="/supervisor-login">Supervisor Login</a>
+              <a className="dropdown-item" href="/admin-login">Admin Login</a>
+            </div>
           </li>
         </ul>
       </div>
