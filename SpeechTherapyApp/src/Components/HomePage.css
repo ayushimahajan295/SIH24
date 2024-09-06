@@ -1,6 +1,6 @@
 /* Hero Section Styles */
 .heroSection {
-  position: relative; 
+  position: relative;
   background-image: url('../Assets/image.png');
   background-size: cover;
   background-position: center;
@@ -9,7 +9,7 @@
   align-items: center;
   height: 80vh;
   overflow: hidden;
-  padding: 0 20px; /* Added padding to avoid text touching the edges */
+  padding: 0 20px;
 }
 
 /* Overlay to create a dimmed effect for text readability */
@@ -19,8 +19,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent dark overlay */
-  z-index: 1; 
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 /* Content positioning and appearance */
@@ -44,8 +44,8 @@
 
 /* Subtext styles */
 .heroSubtext {
-  font-size: 1.25rem;
-  color: #6c757d;
+  font-size: 1.5rem;
+  color: black;
   margin-bottom: 30px;
 }
 
@@ -62,4 +62,69 @@
 
 .heroButton:hover {
   background-color: #005f8a;
+}
+
+/* Popup Styles */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* High z-index to appear above other elements */
+}
+
+.popupContent {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slide-down 0.3s ease-out; /* Add animation */
+}
+
+/* Slide down animation */
+@keyframes slide-down {
+  from {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popupCloseButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #343a40;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.popupCloseButton:hover {
+  color: #0077b6;
+}
+
+.popupLink {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.popupLink:hover {
+  color: #005f8a;
 }

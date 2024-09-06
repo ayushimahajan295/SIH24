@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './Signup.css'; // Import the new CSS file
 import { useAuth0 } from '@auth0/auth0-react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 function Signup() {
   const { loginWithRedirect } = useAuth0();
+  const [showPopup, setShowPopup] = useState(true); // State for showing popup
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
 
   return (
     <Container className="mt-5">
@@ -33,6 +39,15 @@ function Signup() {
           </Form>
         </Col>
       </Row>
+
+      {showPopup && (
+        <div className="signupPopup">
+          <button className="popupCloseButton" onClick={handleClosePopup}>&times;</button>
+          <h4>We are excited to have you here!</h4>
+          <p>Join our community and start your journey today.</p>
+          <p>Feel free to reach out if you have any questions.</p>
+        </div>
+      )}
     </Container>
   );
 }

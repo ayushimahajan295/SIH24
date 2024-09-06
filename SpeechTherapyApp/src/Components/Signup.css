@@ -1,0 +1,61 @@
+/* Signup Form Styles */
+.container {
+    margin-top: 40px;
+  }
+  
+  /* Bottom-right pop-up styles */
+  .signupPopup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e0f7fa; /* Light blue color */
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    animation: slide-up 0.3s ease-out;
+  }
+  
+  /* Slide-up animation */
+  @keyframes slide-up {
+    from {
+      transform: translateY(20%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .signupPopup h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: #0077b6;
+  }
+  
+  .signupPopup p {
+    margin: 0;
+    color: #333;
+    font-size: 0.9rem;
+  }
+  
+  .signupPopup .popupCloseButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #0077b6;
+    cursor: pointer;
+  }
+  
+  .signupPopup .popupCloseButton:hover {
+    color: #005f8a;
+  }
+  

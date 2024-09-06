@@ -31,7 +31,7 @@ function CustomNavbar() {
             <a href="#contactus" className="nav-link nav-link-custom">Contact Us</a>
           </li>
           <li className="nav-item">
-            <a href="/patient-login" className="btn btn-outline-primary btn-custom ml-2">Patient Login</a>
+            <a href="/login" className="btn btn-outline-primary btn-custom ml-2">Patient Login</a>
           </li>
           <li className="nav-item dropdown">
             <a href="#" className="btn btn-outline-primary btn-custom ml-2 dropdown-toggle" id="staffLoginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
