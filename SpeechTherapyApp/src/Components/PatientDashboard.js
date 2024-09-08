@@ -7,7 +7,7 @@ import './PatientDashboard.css'; // Optional if needed for common styles
 const PatientDashboard = () => {
   // Sample patient data
   const patientData = {
-    name: 'John Doe',
+    name: 'Aastha Arora',
     appointment: {
       date: 'September 20, 2024',
       time: '2:00 PM',
