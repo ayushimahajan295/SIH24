@@ -1,0 +1,114 @@
+/* DefaultMainContent.css */
+
+.main-content {
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    height: 100%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif; /* Fun, modern font */
+  }
+  
+  .main-content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #4a4a4a;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  
+  .main-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0077b6;
+    display: flex;
+    align-items: center;
+  }
+  
+  .main-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .upcoming-appointment, .therapy-progress, .resources-section, .feedback-section, .support-section {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .upcoming-appointment p, .therapy-progress p, .resources-section p, .feedback-section p, .support-section p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .resource-list {
+    padding-left: 20px;
+  }
+  
+  .resource-list li {
+    font-size: 15px;
+    margin: 8px 0;
+    color: #007bff;
+  }
+  
+  /* Button Styles */
+  .btn-primary, .btn-secondary, .btn-feedback, .btn-support, .progress-details-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .progress-details-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .progress-details-btn:hover {
+    background-color: #218838;
+  }
+  
+  .btn-feedback {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .btn-feedback:hover {
+    background-color: #117a8b;
+  }
+  
+  .btn-support {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .btn-support:hover {
+    background-color: #e0a800;
+  }
+  
