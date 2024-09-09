@@ -1,34 +1,33 @@
 /* PDScrollable Container */
 .pd-scrollable {
-    width: 250px;
-    background-color: #343a40; /* Dark background for contrast */
-    padding: 20px;
-    height: 100vh; /* Full height */
-    overflow-y: auto; /* Allows vertical scrolling */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  }
-  
-  /* Styling the list */
-  .pd-scrollable-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Individual List Items */
-  .pd-scrollable-item {
-    margin: 15px 0;
-    padding: 12px;
-    background-color: #0077b6; /* Blue background for items */
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Hover effect for list items */
-  .pd-scrollable-item:hover {
-    background-color: #005f8d; /* Darker blue on hover */
-  }
-  
+  width: 250px;
+  background-color: #343a40; /* Dark background for contrast */
+  padding: 20px;
+  height: 100vh; /* Full height */
+  overflow-y: auto; /* Allows vertical scrolling */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Styling the list */
+.pd-scrollable-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual List Items */
+.pd-scrollable-item {
+  margin: 15px 0;
+  padding: 12px;
+  background-color: #0077b6; /* Blue background for items */
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for list items */
+.pd-scrollable-item:hover {
+  background-color: #005f8d; /* Darker blue on hover */
+}

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PatientDashboardNavbar from './PatientDashboardNavbar';
-import PDScrollable from './PDScrollable'; // Scrollable Sidebar
-import DefaultMainContent from './DefaultMainContent'; // Main Content Component
-import './PatientDashboard.css'; // Optional if needed for common styles
+import PDScrollable from './PDScrollable';
+import DefaultMainContent from './DefaultMainContent';
+import HeroSection from './PatientHeroSection'; // Assuming the hero section is imported here
+import ScheduleCalendar from './PatientScheduleCalendar'; // Import the calendar component
+import './PatientDashboard.css';
 
 const PatientDashboard = () => {
-  // Sample patient data
+  const [showSchedule, setShowSchedule] = useState(false); // State to manage calendar visibility
+
   const patientData = {
     name: 'Aastha Arora',
     appointment: {
@@ -21,22 +24,32 @@ const PatientDashboard = () => {
     progressRating: '8.5/10',
   };
 
+  // Handler for showing the schedule
+  const handleScheduleClick = () => {
+    setShowSchedule(true); // Show the calendar when Schedule button is clicked
+  };
+
   return (
     <div>
       <PatientDashboardNavbar />
       
       <div className="dashboard-container">
-        {/* Scrollable Sidebar */}
-        <PDScrollable /> 
+        <PDScrollable onScheduleClick={handleScheduleClick} /> 
         
-        {/* Main Content Section */}
-        <DefaultMainContent 
-          patientName={patientData.name} 
-          appointment={patientData.appointment} 
-          therapist={patientData.therapist}
-          sessionsAttended={patientData.sessionsAttended}
-          progressRating={patientData.progressRating}
-        />
+        <div className="main-content">
+          {/* Conditionally render HeroSection or ScheduleCalendar based on state */}
+          {showSchedule ? (
+            <ScheduleCalendar />
+          ) : (
+            <DefaultMainContent 
+              patientName={patientData.name} 
+              appointment={patientData.appointment} 
+              therapist={patientData.therapist}
+              sessionsAttended={patientData.sessionsAttended}
+              progressRating={patientData.progressRating}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

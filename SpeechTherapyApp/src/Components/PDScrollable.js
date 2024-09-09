@@ -1,11 +1,11 @@
 import React from 'react';
-import './PDScrollable.css'; // Import the custom CSS for styling
+import './PDScrollable.css';
 
-const PDScrollable = () => {
+const PDScrollable = ({ onScheduleClick }) => {
   return (
     <div className="pd-scrollable">
       <ul className="pd-scrollable-list">
-        <li className="pd-scrollable-item">Schedule</li>
+        <li className="pd-scrollable-item" onClick={onScheduleClick}>Schedule</li>
         <li className="pd-scrollable-item">Progress</li>
         <li className="pd-scrollable-item">Therapist Info</li>
         <li className="pd-scrollable-item">Resources</li>

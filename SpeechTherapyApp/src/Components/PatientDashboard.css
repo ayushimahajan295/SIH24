@@ -2,16 +2,15 @@
 
 /* Flexbox layout for the main dashboard container */
 .dashboard-container {
-    display: flex; /* Flex layout to position sidebar and main content side by side */
-    height: 100vh; /* Full viewport height */
-  }
-  
-  /* Main content section beside the scrollable sidebar */
-  .main-content {
-    flex-grow: 1; /* Takes up the remaining space */
-    padding: 20px;
-    background-color: #ffffff;
-    overflow-y: auto; /* Scroll if content exceeds available height */
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
-  }
-  
+  display: flex; /* Flex layout to position sidebar and main content side by side */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Main content section beside the scrollable sidebar */
+.main-content {
+  flex-grow: 1; /* Takes up the remaining space */
+  padding: 20px;
+  background-color: #ffffff;
+  overflow-y: auto; /* Scroll if content exceeds available height */
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
