@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import PatientDashboardNavbar from './PatientDashboardNavbar';
 import PDScrollable from './PDScrollable';
 import DefaultMainContent from './DefaultMainContent';
-import HeroSection from './PatientHeroSection'; // Assuming the hero section is imported here
-import ScheduleCalendar from './PatientScheduleCalendar'; // Import the calendar component
+import HeroSection from './PatientHeroSection';
+import ScheduleCalendar from './PatientScheduleCalendar';
+import ProgressReport from './ProgressReport'; // Import the new ProgressReport component
 import './PatientDashboard.css';
 
 const PatientDashboard = () => {
-  const [showSchedule, setShowSchedule] = useState(false); // State to manage calendar visibility
+  const [showSchedule, setShowSchedule] = useState(false);
+  const [showProgress, setShowProgress] = useState(false); // New state for progress report visibility
 
   const patientData = {
     name: 'Aastha Arora',
@@ -24,9 +26,15 @@ const PatientDashboard = () => {
     progressRating: '8.5/10',
   };
 
-  // Handler for showing the schedule
+  // Handlers for showing the schedule and progress report
   const handleScheduleClick = () => {
-    setShowSchedule(true); // Show the calendar when Schedule button is clicked
+    setShowSchedule(true);
+    setShowProgress(false); // Hide progress when schedule is shown
+  };
+
+  const handleProgressClick = () => {
+    setShowProgress(true);
+    setShowSchedule(false); // Hide schedule when progress is shown
   };
 
   return (
@@ -34,12 +42,17 @@ const PatientDashboard = () => {
       <PatientDashboardNavbar />
       
       <div className="dashboard-container">
-        <PDScrollable onScheduleClick={handleScheduleClick} /> 
+        <PDScrollable 
+          onScheduleClick={handleScheduleClick} 
+          onProgressClick={handleProgressClick} // Pass progress click handler
+        /> 
         
         <div className="main-content">
-          {/* Conditionally render HeroSection or ScheduleCalendar based on state */}
+          {/* Conditionally render based on state */}
           {showSchedule ? (
             <ScheduleCalendar />
+          ) : showProgress ? (
+            <ProgressReport /> // Render ProgressReport component
           ) : (
             <DefaultMainContent 
               patientName={patientData.name} 

@@ -1,0 +1,43 @@
+.progress-report-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .report-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align items to the top */
+  }
+  
+  .progress-report-details {
+    flex: 2; /* Increase the width of the session details */
+    margin-right: 10px; /* Reduce the margin to bring charts closer */
+  }
+  
+  .session-detail {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .progress-charts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduce space between the charts */
+    width: 350px; /* Adjust the width to keep it compact */
+  }
+  
+  .chart-container {
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
