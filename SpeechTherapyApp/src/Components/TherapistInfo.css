@@ -1,0 +1,18 @@
+.therapist-info {
+    padding: 20px;
+    background-color: hwb(216 70% 11%);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+  
+  .therapist-info h2 {
+    margin-bottom: 15px;
+    color: #02475e;
+  }
+  
+  .therapist-info p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  

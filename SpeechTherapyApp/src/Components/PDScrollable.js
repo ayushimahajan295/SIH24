@@ -1,13 +1,13 @@
 import React from 'react';
 import './PDScrollable.css';
 
-const PDScrollable = ({ onScheduleClick, onProgressClick }) => { // Accept new onProgressClick prop
+const PDScrollable = ({ onScheduleClick, onProgressClick, onTherapistClick }) => { // Accept new onTherapistClick prop
   return (
     <div className="pd-scrollable">
       <ul className="pd-scrollable-list">
         <li className="pd-scrollable-item" onClick={onScheduleClick}>Schedule</li>
-        <li className="pd-scrollable-item" onClick={onProgressClick}>Progress</li> {/* Trigger progress click */}
-        <li className="pd-scrollable-item">Therapist Info</li>
+        <li className="pd-scrollable-item" onClick={onProgressClick}>Progress</li>
+        <li className="pd-scrollable-item" onClick={onTherapistClick}>Therapist Info</li> {/* Trigger therapist click */}
         <li className="pd-scrollable-item">Resources</li>
         <li className="pd-scrollable-item">Payment</li>
         <li className="pd-scrollable-item">Feedback</li>
@@ -18,3 +18,4 @@ const PDScrollable = ({ onScheduleClick, onProgressClick }) => { // Accept new o
 };
 
 export default PDScrollable;
+

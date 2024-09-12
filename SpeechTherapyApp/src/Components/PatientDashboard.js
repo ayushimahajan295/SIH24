@@ -4,12 +4,14 @@ import PDScrollable from './PDScrollable';
 import DefaultMainContent from './DefaultMainContent';
 import HeroSection from './PatientHeroSection';
 import ScheduleCalendar from './PatientScheduleCalendar';
-import ProgressReport from './ProgressReport'; // Import the new ProgressReport component
+import ProgressReport from './ProgressReport';
+import TherapistInfo from './TherapistInfo'; // Import the new TherapistInfo component
 import './PatientDashboard.css';
 
 const PatientDashboard = () => {
   const [showSchedule, setShowSchedule] = useState(false);
-  const [showProgress, setShowProgress] = useState(false); // New state for progress report visibility
+  const [showProgress, setShowProgress] = useState(false);
+  const [showTherapistInfo, setShowTherapistInfo] = useState(false); // New state for therapist info
 
   const patientData = {
     name: 'Aastha Arora',
@@ -26,15 +28,23 @@ const PatientDashboard = () => {
     progressRating: '8.5/10',
   };
 
-  // Handlers for showing the schedule and progress report
+  // Handlers for showing different components
   const handleScheduleClick = () => {
     setShowSchedule(true);
-    setShowProgress(false); // Hide progress when schedule is shown
+    setShowProgress(false);
+    setShowTherapistInfo(false); // Hide therapist info when schedule is shown
   };
 
   const handleProgressClick = () => {
     setShowProgress(true);
-    setShowSchedule(false); // Hide schedule when progress is shown
+    setShowSchedule(false);
+    setShowTherapistInfo(false); // Hide therapist info when progress is shown
+  };
+
+  const handleTherapistClick = () => {
+    setShowTherapistInfo(true);
+    setShowSchedule(false);
+    setShowProgress(false); // Hide other sections when therapist info is shown
   };
 
   return (
@@ -44,7 +54,8 @@ const PatientDashboard = () => {
       <div className="dashboard-container">
         <PDScrollable 
           onScheduleClick={handleScheduleClick} 
-          onProgressClick={handleProgressClick} // Pass progress click handler
+          onProgressClick={handleProgressClick}
+          onTherapistClick={handleTherapistClick} // Pass therapist click handler
         /> 
         
         <div className="main-content">
@@ -52,7 +63,9 @@ const PatientDashboard = () => {
           {showSchedule ? (
             <ScheduleCalendar />
           ) : showProgress ? (
-            <ProgressReport /> // Render ProgressReport component
+            <ProgressReport />
+          ) : showTherapistInfo ? (
+            <TherapistInfo therapist={patientData.therapist} /> // Render TherapistInfo component
           ) : (
             <DefaultMainContent 
               patientName={patientData.name} 
