@@ -5,13 +5,15 @@ import DefaultMainContent from './DefaultMainContent';
 import HeroSection from './PatientHeroSection';
 import ScheduleCalendar from './PatientScheduleCalendar';
 import ProgressReport from './ProgressReport';
-import TherapistInfo from './TherapistInfo'; // Import the new TherapistInfo component
+import TherapistInfo from './TherapistInfo';
+import FeedbackForm from './FeedbackPatient'; // Import the new FeedbackForm component
 import './PatientDashboard.css';
 
 const PatientDashboard = () => {
   const [showSchedule, setShowSchedule] = useState(false);
   const [showProgress, setShowProgress] = useState(false);
-  const [showTherapistInfo, setShowTherapistInfo] = useState(false); // New state for therapist info
+  const [showTherapistInfo, setShowTherapistInfo] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(false); // New state for feedback form
 
   const patientData = {
     name: 'Aastha Arora',
@@ -32,19 +34,29 @@ const PatientDashboard = () => {
   const handleScheduleClick = () => {
     setShowSchedule(true);
     setShowProgress(false);
-    setShowTherapistInfo(false); // Hide therapist info when schedule is shown
+    setShowTherapistInfo(false);
+    setShowFeedback(false); // Hide feedback form when schedule is shown
   };
 
   const handleProgressClick = () => {
     setShowProgress(true);
     setShowSchedule(false);
-    setShowTherapistInfo(false); // Hide therapist info when progress is shown
+    setShowTherapistInfo(false);
+    setShowFeedback(false); // Hide feedback form when progress is shown
   };
 
   const handleTherapistClick = () => {
     setShowTherapistInfo(true);
     setShowSchedule(false);
-    setShowProgress(false); // Hide other sections when therapist info is shown
+    setShowProgress(false);
+    setShowFeedback(false); // Hide feedback form when therapist info is shown
+  };
+
+  const handleFeedbackClick = () => {
+    setShowFeedback(true);
+    setShowSchedule(false);
+    setShowProgress(false);
+    setShowTherapistInfo(false); // Hide other sections when feedback is shown
   };
 
   return (
@@ -55,7 +67,8 @@ const PatientDashboard = () => {
         <PDScrollable 
           onScheduleClick={handleScheduleClick} 
           onProgressClick={handleProgressClick}
-          onTherapistClick={handleTherapistClick} // Pass therapist click handler
+          onTherapistClick={handleTherapistClick}
+          onFeedbackClick={handleFeedbackClick} // Pass feedback click handler
         /> 
         
         <div className="main-content">
@@ -65,7 +78,9 @@ const PatientDashboard = () => {
           ) : showProgress ? (
             <ProgressReport />
           ) : showTherapistInfo ? (
-            <TherapistInfo therapist={patientData.therapist} /> // Render TherapistInfo component
+            <TherapistInfo therapist={patientData.therapist} />
+          ) : showFeedback ? (
+            <FeedbackForm /> // Render the FeedbackForm component
           ) : (
             <DefaultMainContent 
               patientName={patientData.name} 
