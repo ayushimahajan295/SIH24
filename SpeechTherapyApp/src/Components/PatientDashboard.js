@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import PatientDashboardNavbar from './PatientDashboardNavbar';
 import PDScrollable from './PDScrollable';
 import DefaultMainContent from './DefaultMainContent';
-import HeroSection from './PatientHeroSection';
 import ScheduleCalendar from './PatientScheduleCalendar';
 import ProgressReport from './ProgressReport'; // Import the new ProgressReport component
 import './PatientDashboard.css';

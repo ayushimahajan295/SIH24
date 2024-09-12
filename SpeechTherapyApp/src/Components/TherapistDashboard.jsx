@@ -31,6 +31,7 @@ const Header = ({ therapistName, toggleSidebar }) => (
 
 
 
+
 // PatientAppointmentCard Component
 
 const PatientAppointmentCard = ({ 
