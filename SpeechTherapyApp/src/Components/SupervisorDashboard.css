@@ -1,0 +1,300 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f5f7;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Layout */
+  .dashboard-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar.open {
+    width: 250px;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar nav ul li a {
+    font-size: 16px;
+    color: #444;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .sidebar nav ul li a:hover {
+    background-color: #e7e7e7;
+  }
+  
+  .sidebar .search {
+    margin-top: 20px;
+  }
+  
+  .sidebar .search input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header img.logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .header nav ul li {
+    margin-left: 20px;
+  }
+  
+  .header nav ul li a {
+    font-size: 16px;
+    color: #444;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header nav ul li a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Therapist Cards */
+  .therapist-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .therapist-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .therapist-header h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .therapist-header span {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .therapist-card .appointments h4 {
+    margin: 15px 0 10px;
+    font-size: 16px;
+  }
+  
+  .therapist-card .appointment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .therapist-card .appointment svg {
+    margin-right: 8px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .actions .reschedule {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actions .reschedule:hover {
+    background-color: #e7e7e7;
+  }
+  
+  .reschedule-form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .reschedule-form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .reschedule-form button.confirm {
+    padding: 8px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .reschedule-form button.confirm:hover {
+    background-color: #218838;
+  }
+  
+  .quick-actions {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .quick-actions input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .quick-actions button.add-remark {
+    background-color: #007bff;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .quick-actions button.add-remark:hover {
+    background-color: #0069d9;
+  }
+  
+  /* Calendar */
+  .calendar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendar h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .calendar .grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+  
+  .calendar .grid div {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .calendar .grid div .w-6 {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+  }
+  
+  .calendar .bg-blue-500 {
+    background-color: #007bff;
+  }
+  
+  .calendar .text-white {
+    color: white;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -100%;
+      transition: left 0.3s ease;
+    }
+  
+    .sidebar.open {
+      left: 0;
+    }
+  
+    .dashboard-container {
+      flex-direction: column;
+    }
+  
+    .content {
+      padding: 10px;
+    }
+  }
+  

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Signup.css'; // Import the new CSS file
 import { useAuth0 } from '@auth0/auth0-react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { createUserWithEmailAndPassword,GoogleAuthProvider } from 'firebase/auth';
+import { auth } from "./firebase-config";
 
 function Signup() {
   const { loginWithRedirect } = useAuth0();

@@ -1,0 +1,283 @@
+.patient-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.patient-card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.patient-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.patient-header h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 8px;
+}
+
+.patient-header span {
+  font-size: 12px;
+  color: #757575;
+}
+
+.appointments {
+  margin-bottom: 12px;
+}
+
+.appointments h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.appointment {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.appointment svg {
+  margin-right: 4px;
+}
+
+.appointment span {
+  margin-right: 8px;
+}
+
+/* Actions Button Styles */
+.actions,
+.quick-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.actions button,
+.quick-actions button,
+.reschedule-form button,
+.edit-session-form button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover,
+.reschedule-form button:hover,
+.edit-session-form button:hover,
+.quick-actions button:hover {
+  background-color: #1976d2;
+}
+
+.actions button svg,
+.quick-actions button svg {
+  margin-right: 4px;
+}
+
+.reschedule-form, 
+.edit-session-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.reschedule-form input,
+.edit-session-form textarea {
+  margin-bottom: 8px;
+  padding: 6px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: flex;
+  margin-top: auto;
+}
+
+.quick-actions input {
+  flex-grow: 1;
+  margin-right: 8px;
+  padding: 6px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+}
+
+.quick-actions button {
+  background-color: #ff9800;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+}
+
+.quick-actions button:hover {
+  background-color: #f57c00;
+}
+
+/* Header */
+.header {
+  background-color: #2563eb;
+  color: white;
+  padding: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  height: 40px;
+  margin-right: 12px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header nav ul {
+  display: flex;
+  gap: 24px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #1f2937;
+  color: white;
+  width: 256px;
+  height: calc(100vh - 80px);
+  padding: 24px;
+  position: fixed;
+  top: 80px;
+  left: -256px;
+  transition: left 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 16px;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar nav ul li a:hover {
+  color: #93c5fd;
+}
+
+.sidebar input {
+  width: 100%;
+  background-color: #374151;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.sidebar input::placeholder {
+  color: #9ca3af;
+}
+
+/* Calendar */
+.calendar {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar h2 {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.calendar .grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar .grid > div {
+  text-align: center;
+  padding: 4px;
+}
+
+.calendar .day {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.calendar .day.has-appointment {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Main Content */
+main {
+  padding-top: 80px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+main.sidebar-open {
+  margin-left: 256px;
+}
+
+/* Responsive layout */
+@media (max-width: 1023px) {
+  .calendar {
+    margin-top: 24px;
+  }
+}

@@ -19,7 +19,7 @@ function CustomNavbar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <a href="/" className="nav-link nav-link-custom">Home</a>
+            <a href="/" className="nav-link nav-link-custom text-red-700">Home</a>
           </li>
           <li className="nav-item">
             <a href="/about" className="nav-link nav-link-custom">About Us</a>
